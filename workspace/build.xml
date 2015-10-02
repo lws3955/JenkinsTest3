@@ -1,0 +1,15 @@
+<project>
+	<target name="run">
+		<mkdir dir="output"/>
+		<touch file="output/DNS_check.log"/>
+		<exec executable="python">
+			<arg value="DNS_check.py"/>
+			 <redirector output="output/DNS_check.log"/>
+		</exec>
+	</target>
+	<target name="run_again">
+		<exec executable="python">
+                        <arg value="DNS_check.py"/>
+                </exec>
+	</target>
+</project>
